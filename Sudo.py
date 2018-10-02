@@ -210,17 +210,23 @@ def Expert():
             	continue
 def Check_Solution(Sudo):
 	i=0
+	j=0
+	count=0
 	while(i<9):
-        unique = set(Sudo[i])  
-        for each in unique: 
-            count = Sudo.count(each)  
-            if count > 1:  
-                print("Oops! You lost the game")
-                return False
-                break
-        i+=1
-    print("Congratulations! You won the game")  
-    return True
+		while(j<9):
+			unique = set(Sudo[i])  
+            for each in unique: 
+                count = Sudo.count(each)  
+                if count > 0:  
+                    print("Oops! You lost the game")
+                    return False
+                    break
+                j+=1    
+            i+=1
+            //within sub grids for each case
+    if(count>0):
+    	print("Congratulations! You won the game")  
+        return True
 
 
 
