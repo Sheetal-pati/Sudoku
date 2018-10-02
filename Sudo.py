@@ -223,7 +223,7 @@ def Check_Solution(Sudo):
                     break
                 j+=1    
             i+=1
-            //within sub grids for each case
+            //check duplicate values within sub grids for each case
     if(count>0):
     	print("Congratulations! You won the game")  
         return True
